@@ -4,7 +4,7 @@
 
 1. **Navigate to the admin panel directory:**
    ```bash
-   cd mrenglish-admin
+   cd speakverse-admin
    ```
 
 2. **Install dependencies:**
@@ -13,7 +13,7 @@
    ```
 
 3. **Create environment file:**
-   Create a `.env.local` file in the `mrenglish-admin` directory:
+   Create a `.env.local` file in the `speakverse-admin` directory:
    ```env
    NEXT_PUBLIC_API_URL=http://localhost:5000/api
    ```

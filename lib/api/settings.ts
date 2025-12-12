@@ -15,10 +15,10 @@ import {
 
 // Mock data
 let mockCompany: CompanyInfo = {
-  name: "MR English",
+  name: "SpeakVerse",
   logoUrl: "/logo.png",
-  primaryContactEmail: "contact@mrenglish.com",
-  supportEmail: "support@mrenglish.com",
+  primaryContactEmail: "contact@speakverse.com",
+  supportEmail: "support@speakverse.com",
   defaultTimezone: "UTC",
   defaultCurrency: "USD",
   legalAddress: "123 Main St, City, Country",
@@ -45,7 +45,7 @@ let mockIntegrations: Integration[] = [
     name: "Firebase",
     type: "firebase",
     enabled: true,
-    config: { apiKey: "***", projectId: "mrenglish" },
+    config: { apiKey: "***", projectId: "speakverse" },
     lastTestedAt: new Date().toISOString(),
     lastTestStatus: "success",
     notes: "Backend expects config in environment variables or secure vault",
@@ -76,7 +76,7 @@ let mockBilling: BillingInfo = {
     last4: "4242",
     brand: "visa",
   },
-  billingContact: "billing@mrenglish.com",
+  billingContact: "billing@speakverse.com",
   invoices: Array.from({ length: 12 }, (_, i) => ({
     _id: `inv-${i + 1}`,
     invoiceNumber: `INV-${String(i + 1).padStart(6, "0")}`,

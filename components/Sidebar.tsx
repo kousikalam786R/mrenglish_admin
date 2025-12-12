@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import {
@@ -94,13 +95,22 @@ export function Sidebar() {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed left-0 top-0 z-40 h-screen w-64 border-r bg-background transition-transform lg:translate-x-0",
+          "fixed left-0 top-0 z-40 h-screen w-64 border-r border-gray-200 bg-white transition-transform lg:translate-x-0",
           isMobileOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
         )}
       >
         <div className="flex h-full flex-col">
-          <div className="flex h-16 items-center border-b px-6">
-            <h2 className="text-xl font-bold">MR English Admin</h2>
+          <div className="flex items-center justify-start border-b border-gray-200 px-4 py-2 h-16">
+            <Image 
+              src="/logo.png" 
+              alt="SpeakVerse Logo" 
+              width={140} 
+              height={50}
+              className="h-20 w-auto object-contain"
+              priority
+              unoptimized
+            />
+            <h3 className="text-lg font-bold text-gray-900 ml-2">Admin</h3>
           </div>
           <nav className="flex-1 space-y-1 p-4">
             {filteredMenuItems.map((item) => {
@@ -116,12 +126,12 @@ export function Sidebar() {
                   className={cn(
                     "flex items-center justify-between gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                     isActive
-                      ? "bg-primary text-primary-foreground"
-                      : "hover:bg-accent hover:text-accent-foreground"
+                      ? "bg-indigo-600 text-white shadow-md"
+                      : "text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                   )}
                 >
                   <div className="flex items-center gap-3">
-                    <Icon className="h-5 w-5" />
+                    <Icon className={cn("h-5 w-5", isActive ? "text-white" : "text-gray-600")} />
                     {item.label}
                   </div>
                   {showBadge && (

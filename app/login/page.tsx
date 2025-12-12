@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useAppDispatch, useAppSelector } from "@/redux/hooks";
 import { setUser, setPermissions } from "@/redux/slices/userSlice";
@@ -85,8 +86,17 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-background to-muted p-4">
       <Card className="w-full max-w-md">
         <CardHeader className="space-y-1">
+          <div className="flex justify-center mb-4">
+            <Image 
+              src="/logo.png" 
+              alt="SpeakVerse Logo" 
+              width={200} 
+              height={200}
+              className="h-48 w-48 object-contain"
+            />
+          </div>
           <CardTitle className="text-2xl font-bold text-center">
-            MR English Admin
+            SpeakVerse Admin
           </CardTitle>
           <CardDescription className="text-center">
             Sign in to your admin account

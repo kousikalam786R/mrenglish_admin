@@ -1,4 +1,4 @@
-# MR English Admin Panel
+# SpeakVerse Admin Panel
 
 A comprehensive admin panel built with Next.js 14 (App Router), TypeScript, TailwindCSS, ShadCN UI, and Redux Toolkit.
 
@@ -58,7 +58,7 @@ npm run dev
 ## Project Structure
 
 ```
-mrenglish-admin/
+speakverse-admin/
 ├── app/                    # Next.js App Router pages
 │   ├── dashboard/          # Dashboard page
 │   ├── users/              # Users management
@@ -127,5 +127,5 @@ npm start
 
 ## License
 
-Private - MR English Project
+Private - SpeakVerse Project
 

@@ -9,8 +9,8 @@ import { AuthRestore } from "@/components/AuthRestore";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "MR English Admin Panel",
-  description: "Admin panel for MR English application",
+  title: "SpeakVerse Admin Panel",
+  description: "Admin panel for SpeakVerse application",
 };
 
 export default function RootLayout({
