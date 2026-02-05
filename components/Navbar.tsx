@@ -14,19 +14,19 @@ export function Navbar() {
   const dispatch = useAppDispatch();
 
   const handleLogout = () => {
-    // Clear token from localStorage
     if (typeof window !== "undefined") {
       localStorage.removeItem("admin_token");
+      localStorage.removeItem("admin_institute_id");
+      document.cookie = "admin_role=; path=/; max-age=0";
     }
-    // Clear Redux state
     dispatch(clearUser());
-    // Redirect to login (or home)
     router.push("/login");
   };
 
   const getRoleBadgeVariant = (role: string) => {
     if (role === "super_admin") return "destructive";
     if (role === "admin") return "default";
+    if (role === "institute") return "outline";
     return "secondary";
   };
 

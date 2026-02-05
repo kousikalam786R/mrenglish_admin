@@ -7,6 +7,7 @@ interface UserState {
   email: string;
   permissions: string[];
   isAuthenticated: boolean;
+  instituteId?: string;
 }
 
 const initialState: UserState = {
@@ -15,6 +16,7 @@ const initialState: UserState = {
   email: "admin@mre.com",
   permissions: [],
   isAuthenticated: true,
+  instituteId: undefined,
 };
 
 const userSlice = createSlice({
@@ -26,6 +28,7 @@ const userSlice = createSlice({
       state.role = action.payload.role;
       state.email = action.payload.email;
       state.isAuthenticated = true;
+      state.instituteId = action.payload.instituteId;
     },
     setPermissions: (state, action: PayloadAction<string[]>) => {
       state.permissions = action.payload;
@@ -36,6 +39,7 @@ const userSlice = createSlice({
       state.email = "";
       state.permissions = [];
       state.isAuthenticated = false;
+      state.instituteId = undefined;
     },
   },
 });

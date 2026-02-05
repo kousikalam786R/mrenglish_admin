@@ -1,6 +1,7 @@
 export type AdminRole = 
   | "super_admin"
   | "admin"
+  | "institute"
   | "support_manager"
   | "support_agent"
   | "content_manager"
@@ -14,6 +15,7 @@ export interface AdminUser {
   role: AdminRole;
   email: string;
   id?: string;
+  instituteId?: string; // Set when role is institute
 }
 
 export interface RoutePermission {

@@ -7,6 +7,9 @@ import { cn } from "@/lib/utils";
 import {
   LayoutDashboard,
   Users,
+  Building2,
+  ClipboardList,
+  GraduationCap,
   CreditCard,
   Ticket,
   FileText,
@@ -27,6 +30,9 @@ import { fetchTicketStats } from "@/lib/api/tickets";
 const menuItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard, route: "dashboard" },
   { href: "/users", label: "Users", icon: Users, route: "users" },
+  { href: "/institutes", label: "Institutes", icon: Building2, route: "institutes" },
+  { href: "/institute-leads", label: "Institute Leads", icon: ClipboardList, route: "institute-leads" },
+  { href: "/students", label: "Students", icon: GraduationCap, route: "students" },
   { href: "/subscriptions", label: "Subscriptions", icon: CreditCard, route: "subscriptions" },
   { href: "/tickets", label: "Support Tickets", icon: Ticket, route: "tickets" },
   { href: "/content", label: "Content", icon: FileText, route: "content" },

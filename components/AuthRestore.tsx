@@ -26,19 +26,20 @@ export function AuthRestore() {
         if (response.data && response.data.user) {
           const userData = response.data.user;
           
-          // Check if we have a role in cookie (for admin role)
-          // TODO: Add admin role to user model or get from API
+          // Check if we have a role in cookie or from API
           const roleCookie = document.cookie
             .split("; ")
             .find((row) => row.startsWith("admin_role="));
-          const role = roleCookie?.split("=")[1] as AdminRole || "super_admin";
+          const role = (userData.role || roleCookie?.split("=")[1] || "super_admin") as AdminRole;
+          const instituteId = userData.instituteId || localStorage.getItem("admin_institute_id") || undefined;
 
           // Set user from API response
           dispatch(
             setUser({
               name: userData.name || "Admin",
-              role: role,
+              role,
               email: userData.email || "",
+              instituteId: instituteId || undefined,
             })
           );
 

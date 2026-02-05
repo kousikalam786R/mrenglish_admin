@@ -2,6 +2,8 @@ export const RolePermissions: Record<string, string[]> = {
   super_admin: [
     "dashboard",
     "users",
+    "institutes",
+    "institute-leads",
     "subscriptions",
     "tickets",
     "content",
@@ -13,11 +15,14 @@ export const RolePermissions: Record<string, string[]> = {
   admin: [
     "dashboard",
     "users",
+    "institutes",
+    "institute-leads",
     "subscriptions",
     "tickets",
     "content",
     "analytics"
   ],
+  institute: ["dashboard", "students"],
   support_manager: ["tickets"],
   support_agent: ["tickets"],
   content_manager: ["content"],

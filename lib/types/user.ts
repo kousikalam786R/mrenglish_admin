@@ -27,6 +27,8 @@ export interface User {
   paymentMethod?: string;
   // Legacy field for backward compatibility
   subscriptionStatus?: "paid" | "free";
+  // Institute student (when managed by an institute)
+  instituteId?: string;
 }
 
 export interface UserFilters {
